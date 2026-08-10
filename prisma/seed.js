@@ -129,7 +129,7 @@ const BLOG_POSTS = [
     excerpt: 'Recommendations that work whether your group is competitive or just here to hang out.',
     authorName: 'Jordan Lee',
     content:
-      'Catan remains one of the best gateway strategy games because the trading mechanic keeps everyone involved even when it is not their turn — you are always negotiating with someone.\n\nFor larger groups, party-style games with shorter rounds keep energy up better than long strategy games where one elimination can leave a player sitting out for an hour.\n\nThe real trick to picking a good group game is matching the game length to your group's attention span, not the other way around. A 20-minute game that gets played three times beats a 90-minute game everyone quits halfway through.',
+      'Catan remains one of the best gateway strategy games because the trading mechanic keeps everyone involved even when it is not their turn — you are always negotiating with someone.\n\nFor larger groups, party-style games with shorter rounds keep energy up better than long strategy games where one elimination can leave a player sitting out for an hour.\n\nThe real trick to picking a good group game is matching the game length to your group\'s attention span, not the other way around. A 20-minute game that gets played three times beats a 90-minute game everyone quits halfway through.',
     coverImage: img('blog-boardgames', 1200, 630),
   },
   {
@@ -137,7 +137,7 @@ const BLOG_POSTS = [
     excerpt: 'That clear jar on your counter might be the reason your coffee tastes stale.',
     authorName: 'Priya Sharma',
     content:
-      'Light, air, moisture, and heat are the four enemies of fresh coffee — and a clear glass jar next to the stove hits three of the four at once. An opaque, airtight container kept in a cool cabinet will keep beans fresher for weeks longer.\n\nBuying whole beans and grinding just before brewing makes a bigger difference than almost any other change you can make, since ground coffee loses its aroma compounds within days.\n\nIf you buy in bulk, portion out a week's worth into a small container and freeze the rest in an airtight bag, taking out only what you need.',
+      'Light, air, moisture, and heat are the four enemies of fresh coffee — and a clear glass jar next to the stove hits three of the four at once. An opaque, airtight container kept in a cool cabinet will keep beans fresher for weeks longer.\n\nBuying whole beans and grinding just before brewing makes a bigger difference than almost any other change you can make, since ground coffee loses its aroma compounds within days.\n\nIf you buy in bulk, portion out a week\'s worth into a small container and freeze the rest in an airtight bag, taking out only what you need.',
     coverImage: img('blog-coffee', 1200, 630),
   },
 ];
