@@ -19,8 +19,8 @@ function buildSort(sort) {
 }
 
 const list = asyncHandler(async (req, res) => {
-  const { search, category, minPrice, maxPrice, rating, sort, featured } = req.query;
-  const { page, limit, skip } = parsePagination(req.query);
+  const { search, category, minPrice, maxPrice, rating, sort, featured } = req.validatedQuery;
+  const { page, limit, skip } = parsePagination(req.validatedQuery);
 
   const where = {
     ...(search

@@ -19,7 +19,7 @@ function errorHandler(err, req, res, next) {
     message = 'Record not found';
   }
 
-  if (statusCode === 500 && !env.isProduction) {
+  if (statusCode === 500) {
     console.error(err);
   }
 
