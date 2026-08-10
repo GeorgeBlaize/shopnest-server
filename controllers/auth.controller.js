@@ -13,7 +13,9 @@ function setAuthCookie(res, token) {
   res.cookie(env.cookieName, token, {
     httpOnly: true,
     secure: env.isProduction,
-    sameSite: 'lax',
+    // Client and server are on different domains in production (Vercel <-> Render),
+    // so the cookie must be SameSite=None (requires Secure) to be sent cross-site.
+    sameSite: env.isProduction ? 'none' : 'lax',
     maxAge: COOKIE_MAX_AGE_MS,
   });
 }
@@ -92,7 +94,11 @@ const me = asyncHandler(async (req, res) => {
 });
 
 const logout = asyncHandler(async (req, res) => {
-  res.clearCookie(env.cookieName);
+  res.clearCookie(env.cookieName, {
+    httpOnly: true,
+    secure: env.isProduction,
+    sameSite: env.isProduction ? 'none' : 'lax',
+  });
   res.json({ success: true, message: 'Logged out' });
 });
 
