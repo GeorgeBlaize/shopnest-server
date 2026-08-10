@@ -20,7 +20,6 @@ function errorHandler(err, req, res, next) {
   }
 
   if (statusCode === 500 && !env.isProduction) {
-    // eslint-disable-next-line no-console
     console.error(err);
   }
 
