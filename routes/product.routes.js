@@ -10,6 +10,7 @@ const { authenticate } = require('../middleware/auth');
 const { authorize } = require('../middleware/roleGuard');
 
 router.get('/', validate(listProductsSchema), controller.list);
+router.get('/id/:id', authenticate, authorize('ADMIN', 'MANAGER'), controller.getById);
 router.get('/:slug', controller.getBySlug);
 router.post('/', authenticate, authorize('ADMIN', 'MANAGER'), validate(createProductSchema), controller.create);
 router.put('/:id', authenticate, authorize('ADMIN', 'MANAGER'), validate(updateProductSchema), controller.update);

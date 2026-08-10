@@ -81,6 +81,13 @@ const getBySlug = asyncHandler(async (req, res) => {
   res.json({ success: true, data: { product, related } });
 });
 
+const getById = asyncHandler(async (req, res) => {
+  const { id } = req.params;
+  const product = await prisma.product.findUnique({ where: { id }, include: { category: true } });
+  if (!product) throw ApiError.notFound('Product not found');
+  res.json({ success: true, data: { product } });
+});
+
 const create = asyncHandler(async (req, res) => {
   const { title } = req.body;
   const baseSlug = slugify(title);
@@ -108,4 +115,4 @@ const remove = asyncHandler(async (req, res) => {
   res.json({ success: true, message: 'Product deleted' });
 });
 
-module.exports = { list, getBySlug, create, update, remove };
+module.exports = { list, getBySlug, getById, create, update, remove };
